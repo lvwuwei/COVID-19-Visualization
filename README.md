@@ -108,6 +108,7 @@
     PASSWORD = "byy3"
 
 	
+补充部分错误：一当python3 dxy_record.py的时候，没有mysql模块错误，pip3 install mysql-connector-python-rf安装模块，二当没有DBUtils模块pip3 install DBUtils==1.3 
 
 4.数据：
 	
@@ -118,5 +119,6 @@
 	数据清洗：地区标准化 - region_recognition.py
 	
 	自动更新任务：startData.bat 或 ./startData.sh
+	
 	
 
