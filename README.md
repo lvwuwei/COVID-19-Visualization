@@ -93,7 +93,20 @@
 	
 	新建数据库epidemic，将该文件导入MySQL即可。（命令行方式：use epidemic; source /root/epidemic.sql;）
 	
-	数据库账号密码在src/config.py中配置
+	数据库账号密码在src/config.py中配置 配置中很关键首先解决mysql服务器可以远程访问创建用户后，一授权用户远程访问权限，二需要找到配置文件，如mariadb的配置文件位置为etc/mysql/mariadb.conf.d# nano 50-server.cnf  三，给配置文件中，bind-ip 127.0.0.0更改为0.0.0.0 四配置文件中
+	class Mysql():
+    HOST = "127.0.0.1"
+    HOST = "localhost"
+    PORT = 3306
+    DB_NAME = "epidemic"
+    USER_NAME = "lvwuwei"
+    PASSWORD = "byy3"
+    TB_NAME = "patients"
+    POOL_SIZE = 3
+
+    HOST = "34.248.82.211"
+    PASSWORD = "byy3"
+
 	
 
 4.数据：
@@ -106,3 +119,4 @@
 	
 	自动更新任务：startData.bat 或 ./startData.sh
 	
+
